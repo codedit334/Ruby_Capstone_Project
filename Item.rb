@@ -1,13 +1,12 @@
-class Item 
+class Item
+  attr_accessor :genre, :authour, :source, :label, :publish_date, :archived, :id
+
   initialize(genre, author, source, label, publish_date, archived) do
+    @id = rand(1 .. 100)
     @genre = genre
-    genre.items << self
     @author = author
-    author.items << self
     @source = source
-    source.items << self
     @label = label
-    label.items << self
     @publish_date = publish_date
     @archived = archived
   end
