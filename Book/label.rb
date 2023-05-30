@@ -1,8 +1,8 @@
 class Label
     attr_reader :id, :items
     attr_accessor :title, :color
-    
-    initialize(title,color) do
+
+    initialize(title, color) do
         @id = rand(1..1000)
         @title = title
         @color = color

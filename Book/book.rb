@@ -2,9 +2,9 @@ require './item.rb'
 
 class Book < Item
     attr_accessor :cover_state, :publisher
-    
-    initialize(publisher, cover_state, label, publish_date, archived) do
-        super(id, label, publish_date, archived)
+
+    initialize(publisher, cover_state, publish_date, archived) do
+        super(publish_date, archived)
         @cover_state = cover_state
         @publisher = publisher
     end
