@@ -1,9 +1,11 @@
 require './Book/book'
 require './Book/label'
 
+require './data/preserve.rb'
+
 class App
     def initialize
-        @book = []
+        @book = load_Data('./data/books.json')
         @label = [Label.new("New", "yellow"), Label.new("Gift", "green")]
     end
 
@@ -11,7 +13,7 @@ class App
         @book.each do |book|
 
             label = @label.find { |label| label.items.include?(book) }
-            
+
             puts "Publisher: #{book.publisher}"
             puts "Cover State: #{book.cover_state}"
             puts "Publish Date: #{book.publish_date}"
