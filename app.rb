@@ -34,7 +34,7 @@ class App
     def create_book
         @book = load_data('./data/books.json')
         @label = load_data('./data/labels.json')
-        
+
         print 'Enter book publisher:'
         publisher = gets.chomp
 
@@ -70,5 +70,5 @@ class App
 end
 
 app = App.new
-# app.create_book
+app.create_book
 app.list_all_books
