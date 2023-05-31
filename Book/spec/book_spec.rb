@@ -15,7 +15,7 @@ describe Book do
         result = book3.send(:can_be_archived?)
   
         expect(result).to be(true)
-      end
+    end
 
     it 'method move_to_archive should make @archive true' do
         book3.move_to_archive()
