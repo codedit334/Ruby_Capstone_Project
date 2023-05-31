@@ -5,8 +5,8 @@ require './data/preserve.rb'
 
 class App
     def initialize
-        @book = load_Data('./data/books.json')
-        @label = [Label.new("New", "yellow"), Label.new("Gift", "green")]
+        @book = load_data('./data/books.json')
+        @label = [Label.new("New", "yellow").to_h, Label.new("Gift", "green").to_h]
     end
 
     def list_all_books
@@ -37,9 +37,10 @@ class App
         p 'Enter book publish date (YYYY-MM-DD):'
         publish_date = gets.chomp
 
-        book = Book.new(publisher, cover_state, publish_date)
+        book = Book.new(publisher, cover_state, publish_date).to_h
         @book.push(book)
-
+        save_data(@book, './data/books.json')
+        
         p 'Book created successfully'
 
         p "Do you want to add a label to #{publisher}'s book? (y/n)"
