@@ -35,18 +35,3 @@ def main
 end
 
 main
-
-
-
-
-
-
-
-
-
-
-# Implement startup actions:
-# Present the user with a list of options to perform.
-# Let users choose an option.
-# If needed, ask for parameters for the option.
-# Have a way to quit the app.
