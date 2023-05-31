@@ -1,3 +1,4 @@
+# require './app'
 class Main
   def options
     puts 'Please choose an option by entering a member: '
@@ -17,7 +18,6 @@ class Main
   end
 
   def execute_app
-    # select = Select.new
     puts 'Welcome!'
 
     loop do
@@ -25,8 +25,6 @@ class Main
       option = gets.chomp
 
       break if option == '13'
-
-      # select.select(option)
     end
   end
 end
