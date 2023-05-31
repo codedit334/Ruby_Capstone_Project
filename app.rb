@@ -9,9 +9,13 @@ class App
 
     def list_all_books
         @book.each do |book|
+
+            label = @label.find { |label| label.items.include?(book) }
+            
             puts "Publisher: #{book.publisher}"
             puts "Cover State: #{book.cover_state}"
             puts "Publish Date: #{book.publish_date}"
+            puts "Label: #{label.title}" if label
         end
     end
 
@@ -22,7 +26,7 @@ class App
     end
 
     def create_book
-        p 'Enter book publisher:'
+        puts 'Enter book publisher:'
         publisher = gets.chomp
 
         p 'Enter book cover state:'
@@ -52,3 +56,8 @@ class App
         p 'Thanks for using our app'
     end
 end
+
+app = App.new
+app.list_all_labels
+app.create_book
+app.list_all_books
