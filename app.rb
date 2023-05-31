@@ -50,13 +50,9 @@ class App
   end
 
   def save_data
-    File.open('music.json', 'w') do |file|
-      file.write(JSON.generate(@music))
-    end
+    File.write('music.json', JSON.generate(@music))
 
-    File.open('genre.json', 'w') do |file|
-      file.write(JSON.generate(@genre.map(&:to_hash)))
-    end
+    File.write('genre.json', JSON.generate(@genre.map(&:to_hash)))
   end
 
   def load_data
@@ -65,10 +61,10 @@ class App
       @music = music_data.is_a?(Array) ? music_data : []
     end
 
-    if File.exist?('genre.json')
-      genre_data = JSON.parse(File.read('genre.json'))
-      @genre = genre_data.is_a?(Array) ? genre_data.map { |data| Genre.new(data['name']) } : []
-    end
+    return unless File.exist?('genre.json')
+
+    genre_data = JSON.parse(File.read('genre.json'))
+    @genre = genre_data.is_a?(Array) ? genre_data.map { |data| Genre.new(data['name']) } : []
   end
 end
 
@@ -79,6 +75,3 @@ app.add_music_album
 app.create_genre
 app.list_music_albums
 app.list_genres
-
-
-
