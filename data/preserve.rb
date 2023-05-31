@@ -1,3 +1,5 @@
+require 'json'
+
 def save_data(arr, path)
     File.write(path, JSON.generate(arr))
 end

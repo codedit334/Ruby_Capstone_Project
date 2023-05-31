@@ -5,53 +5,62 @@ require './data/preserve.rb'
 
 class App
     def initialize
-        @book = load_data('./data/books.json')
-        @label = [Label.new("New", "yellow").to_h, Label.new("Gift", "green").to_h]
+        @book = []
+        @label = []
     end
 
     def list_all_books
+        @book = load_data('./data/books.json')
+        @label = load_data('./data/labels.json')
         @book.each do |book|
 
-            label = @label.find { |label| label.items.include?(book) }
-
-            puts "Publisher: #{book.publisher}"
-            puts "Cover State: #{book.cover_state}"
-            puts "Publish Date: #{book.publish_date}"
-            puts "Label: #{label.title}" if label
+            label = @label.find { |label| label['items'].include?(book) }
+            puts "\n_____\n\n"
+            puts "Publisher: #{book["publisher"]}"
+            puts "Cover State: #{book['cover_state']}"
+            puts "Publish Date: #{book['publish_date']}"
+            puts "Label: #{label['title']}" if label
+            puts "\n_____\n"
         end
     end
 
     def list_all_labels
+        @label = load_data('./data/labels.json')
         @label.each_with_index do |label, index|
-            puts "#{index + 1}) Title: #{label.title}, Color: #{label.color}"
+            puts "#{index + 1}) Title: #{label['title']}, Color: #{label['color']}"
         end
     end
 
     def create_book
-        puts 'Enter book publisher:'
+        @book = load_data('./data/books.json')
+        @label = load_data('./data/labels.json')
+        
+        print 'Enter book publisher:'
         publisher = gets.chomp
 
-        p 'Enter book cover state:'
+        print 'Enter book cover state:'
         cover_state = gets.chomp
 
-        p 'Enter book publish date (YYYY-MM-DD):'
+        print 'Enter book publish date (YYYY-MM-DD):'
         publish_date = gets.chomp
 
         book = Book.new(publisher, cover_state, publish_date).to_h
         @book.push(book)
         save_data(@book, './data/books.json')
-        
+
         p 'Book created successfully'
 
-        p "Do you want to add a label to #{publisher}'s book? (y/n)"
+        print "Do you want to add a label to #{publisher}'s book? (y/n)"
         answer = gets.chomp
         if(answer == 'y' || answer == 'Y')
             list_all_labels()
 
-            p 'Choose a label index:'
+            print 'Choose a label index:'
 
             label_index = gets.chomp.to_i - 1
-            @label[label_index].add_item(book)
+            @label[label_index]['items'] << book
+
+            save_data(@label, './data/labels.json')
 
             p 'Book added to label successfully'
         end
@@ -61,6 +70,5 @@ class App
 end
 
 app = App.new
-app.list_all_labels
-app.create_book
+# app.create_book
 app.list_all_books
