@@ -57,3 +57,8 @@ class GameUI
     Author.new(first_name, last_name)
   end
 end
+
+game = GameUI.new
+game.add_game
+game.list_games
+game.list_authors

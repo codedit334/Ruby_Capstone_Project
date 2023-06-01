@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 require './Book/book'
 require './Book/label'
 
@@ -75,4 +73,3 @@ end
 app = App.new
 app.create_book
 app.list_all_books
->>>>>>> book
