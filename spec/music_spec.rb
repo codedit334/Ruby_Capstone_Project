@@ -3,7 +3,7 @@ require_relative '../music_classes/music'
 
 RSpec.describe MusicAlbum do
   let(:genre) { Genre.new('Rock') }
-  let(:album) { MusicAlbum.new(true, '2001-05-31', "name") }
+  let(:album) { MusicAlbum.new(true, '2001-05-31', 'name') }
 
   describe '#can_be_archived?' do
     context 'when the album can be archived' do
