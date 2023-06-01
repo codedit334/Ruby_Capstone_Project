@@ -12,6 +12,10 @@ class App
   def list_all_books
     @book = load_data('./data/books.json')
     @label = load_data('./data/labels.json')
+    if(@book.empty?)
+      p 'There are no books'
+      return
+    end
     @book.each do |book|
       label = @label.find { |label_item| label_item['items'].include?(book) }
       puts "\n_____\n\n"
@@ -25,6 +29,10 @@ class App
 
   def list_all_labels
     @label = load_data('./data/labels.json')
+    if @label.empty?
+      puts 'There are no labels'
+      return
+    end
     @label.each_with_index do |label, index|
       puts "#{index + 1}) Title: #{label['title']}, Color: #{label['color']}"
     end
