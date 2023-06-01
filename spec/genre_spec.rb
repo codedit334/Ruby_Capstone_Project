@@ -5,7 +5,7 @@ RSpec.describe Genre do
   describe '#add_item' do
     it "sets the genre of an Item class' instance to the instance of the Genre class" do
       genre = Genre.new('Action')
-      music_album = MusicAlbum.new(true, '2020-05-10')
+      music_album = MusicAlbum.new(true, '2020-05-10', "name")
       genre.add_item(music_album)
 
       expect(music_album.genre).to eq(genre)
