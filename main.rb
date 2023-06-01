@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Main
   def options
     puts 'Please choose an option by entering a member: '
