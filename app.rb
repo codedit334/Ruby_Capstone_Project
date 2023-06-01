@@ -117,14 +117,14 @@ class App
   end
 
   def save_data
-    File.write('music.json', JSON.generate(@music.map(&:to_h)))
+    File.write('./data/music.json', JSON.generate(@music.map(&:to_h)))
 
-    File.write('genre.json', JSON.generate(@genre.map(&:to_hash)))
+    File.write('./data/genre.json', JSON.generate(@genre.map(&:to_hash)))
   end
 
   def load_data
-    if File.exist?('music.json')
-      music_data = JSON.parse(File.read('music.json'))
+    if File.exist?('./data/music.json')
+      music_data = JSON.parse(File.read('./data/music.json'))
       @music = if music_data.is_a?(Array)
                  music_data.map do |data|
                    MusicAlbum.new(data['on_spotify'], data['publish_date'],
@@ -135,9 +135,9 @@ class App
                end
     end
 
-    return unless File.exist?('genre.json')
+    return unless File.exist?('./data/genre.json')
 
-    genre_data = JSON.parse(File.read('genre.json'))
+    genre_data = JSON.parse(File.read('./data/genre.json'))
     @genre = genre_data.is_a?(Array) ? genre_data.map { |data| Genre.new(data['name']) } : []
   end
 end

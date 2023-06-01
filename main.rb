@@ -20,27 +20,18 @@ class Main
     app = App.new
     game = GameUI.new
     option = gets.chomp
+
     case option
-    when '1'
-      app.list_all_books
-    when '2'
-      app.list_music_albums
-    when '3'
-      game.list_games
-    when '4'
-      app.list_genres
-    when '5'
-      app.list_all_labels
-    when '6'
-      game.list_authors
-    when '7'
-      app.create_book
-    when '8'
-      app.add_music_album
-    when '9'
-      game.add_game
-    when '10'
-      exit_app
+    when '1' then app.list_all_books
+    when '2' then app.list_music_albums
+    when '3' then game.list_games
+    when '4' then app.list_genres
+    when '5' then app.list_all_labels
+    when '6' then game.list_authors
+    when '7' then app.create_book
+    when '8' then app.add_music_album
+    when '9' then game.add_game
+    else exit_app
     end
   end
 
