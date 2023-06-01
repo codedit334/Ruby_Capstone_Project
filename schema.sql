@@ -32,3 +32,17 @@ CREATE TABLE book(
   CONSTRAINT fk_book FOREIGN KEY (label_id) REFERENCES label (id) ON DELETE CASCADE,
   PRIMARY KEY(id)
 );
+CREATE TABLE genre (
+   id SERIAL PRIMARY KEY,
+   genre_name  VARCHAR(100)
+);
+
+CREATE TABLE music_album (
+    id SERIAL PRIMARY KEY,
+    genre_id INT,
+    published_date DATE,
+    archived BOOLEAN,
+    on_spotify BOOLEAN,
+    CONSTRAINT fk_genre FOREIGN KEY (genre_id)
+       REFERENCES genre (id)  
+);

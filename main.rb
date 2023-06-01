@@ -1,3 +1,4 @@
+# require './app'
 class Main
   def options
     puts 'Please choose an option by entering a member: '
@@ -15,7 +16,6 @@ class Main
   end
 
   def execute_app
-    # select = Select.new
     puts 'Welcome!'
 
     loop do
@@ -23,8 +23,6 @@ class Main
       option = gets.chomp
 
       break if option == '13'
-
-      # select.select(option)
     end
   end
 end
@@ -35,9 +33,3 @@ def main
 end
 
 main
-
-# Implement startup actions:
-# Present the user with a list of options to perform.
-# Let users choose an option.
-# If needed, ask for parameters for the option.
-# Have a way to quit the app.
