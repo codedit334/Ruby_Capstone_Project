@@ -1,18 +1,24 @@
-<<<<<<< HEAD
 require './Book/book'
 require './Book/label'
 
 require './data/preserve'
 
+require_relative './music_classes/music'
+require_relative './music_classes/genre'
+require 'json'
+
 class App
   def initialize
     @book = []
     @label = []
+    @music = []
+    @genre = []
+    load_data
   end
 
   def list_all_books
-    @book = load_data('./data/books.json')
-    @label = load_data('./data/labels.json')
+    @book = load_data_from_path('./data/books.json')
+    @label = load_data_from_path('./data/labels.json')
     if @book.empty?
       p 'There are no books'
       return
@@ -29,7 +35,7 @@ class App
   end
 
   def list_all_labels
-    @label = load_data('./data/labels.json')
+    @label = load_data_from_path('./data/labels.json')
     if @label.empty?
       puts 'There are no labels'
       return
@@ -40,8 +46,8 @@ class App
   end
 
   def create_book
-    @book = load_data('./data/books.json')
-    @label = load_data('./data/labels.json')
+    @book = load_data_from_path('./data/books.json')
+    @label = load_data_from_path('./data/labels.json')
 
     print 'Enter book publisher:'
     publisher = gets.chomp
@@ -53,7 +59,7 @@ class App
     publish_date = gets.chomp
 
     book = Book.new(publisher, cover_state, publish_date).to_h
-    save_data(@book.push(book), './data/books.json')
+    save_data_to_path(@book.push(book), './data/books.json')
     p 'Book created successfully'
 
     print "Do you want to add a label to #{publisher}'s book? (y/n)"
@@ -66,18 +72,8 @@ class App
     label_index = gets.chomp.to_i - 1
     @label[label_index]['items'] << book
 
-    save_data(@label, './data/labels.json')
+    save_data_to_path(@label, './data/labels.json')
     p 'Book added to label successfully'
-=======
-require_relative './music_classes/music'
-require_relative './music_classes/genre'
-require 'json'
-
-class App
-  def initialize
-    @music = []
-    @genre = []
-    load_data
   end
 
   def create_genre
@@ -144,19 +140,15 @@ class App
 
     genre_data = JSON.parse(File.read('genre.json'))
     @genre = genre_data.is_a?(Array) ? genre_data.map { |data| Genre.new(data['name']) } : []
->>>>>>> create-music-catalogue
   end
 end
 
 app = App.new
-<<<<<<< HEAD
-app.create_book
-app.list_all_books
-=======
+# app.create_book
+# app.list_all_books
 # app.add_music_album
-app.list_music_albums
+# app.list_music_albums
 # app.list_genres
 # app.create_genre
 # app.list_music_albums
 # app.list_genres
->>>>>>> create-music-catalogue
