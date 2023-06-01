@@ -143,7 +143,7 @@ class App
   end
 end
 
-app = App.new
+App.new
 # app.create_book
 # app.list_all_books
 # app.add_music_album
