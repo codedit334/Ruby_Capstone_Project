@@ -38,9 +38,10 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Has independent classes]**
-- **[Use the "Decorator" design pattern]**
-- **[Has Associations]**
+- **[Has 4 1 to many associations]**
 - **[Has basic UI.]**
+- [ ] **[Preserve data in Json files]**
+- [ ] **[Unit tests]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -55,7 +56,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git git@github.com:zeff96/OOP_School_Library.git
+  git git@github.com:zeff96/Ruby_Capstone_Project.git
 ```
 
 ### Install
@@ -82,13 +83,18 @@ Install this project with:
 - GitHub: [@SaneMyburg](https://github.com/SaneMyburg)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/sane-myburg/)
 
+👤Nicholas Kwamena Amissah <a name="authors"></a>
+
+- GitHub: [Nicholas Amissah](https://github.com/atok624)
+- Twitter: [Nicholas Amissah](https://twitter.com/MysticalAmissah)
+- LinkedIn: [Nicholas Amissah](https://www.linkedin.com/in/nicholas-amissah-153b09154)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Refactor the code]**
-- [ ] **[Preserve data]**
-- [ ] **[Unit tests]**
+- [ ] **[Refactor the code to unify methods]**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,7 +102,7 @@ Install this project with:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/codedit334/OOP_School_Library/issues).
+Feel free to check the [issues page](https://github.com/codedit334/Ruby_Capstone_Project/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,6 +120,6 @@ I would like to thank the Microverse community and my coding partners for the su
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
