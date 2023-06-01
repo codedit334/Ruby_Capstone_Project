@@ -3,7 +3,7 @@ require './Book/label'
 describe Book do
   context 'should create instance of Book Class and Label Class' do
     book1 = Book.new('Publisher', 'good', '2022-01-01')
-    label1 = Label.new('Title', 'red')
+    label1 = Label.new('Gift', 'red')
 
     it 'check for a book object' do
       expect(book1).to be_instance_of(Book)

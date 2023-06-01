@@ -16,9 +16,10 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  IgnoredMethods: ['describe']
+  AllowedMethods: ['describe']
   Max: 30
-
+Metrics/CyclomaticComplexity:
+  Max: 10
 
 Style/Documentation:
   Enabled: false
@@ -37,6 +38,11 @@ Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
   AllowForAlignment: false
+<<<<<<< HEAD
+=======
+Layout/EndOfLine:
+  Enabled: false
+>>>>>>> book
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
@@ -49,4 +55,8 @@ Style/HashEachMethods:
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
+<<<<<<< HEAD
   Enabled: false
+=======
+  Enabled: false
+>>>>>>> book
