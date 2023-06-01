@@ -25,6 +25,7 @@ class App
   def list_games
     @game.list_games
   end
+
   def list_authors
     @game.list_authors
   end
