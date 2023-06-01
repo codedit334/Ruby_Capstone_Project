@@ -57,5 +57,3 @@ class GameUI
     Author.new(first_name, last_name)
   end
 end
-
-game = GameUI.new

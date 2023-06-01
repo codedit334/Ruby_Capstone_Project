@@ -85,7 +85,6 @@ class App
 
   def list_music_albums
     puts 'Music Albums:'
-    puts @music
     @music.each do |album|
       puts "On Spotify: #{album.on_spotify ? 'Yes' : 'No'}"
       puts "Publication Date: #{album.publish_date}"
@@ -142,9 +141,3 @@ class App
     @genre = genre_data.is_a?(Array) ? genre_data.map { |data| Genre.new(data['name']) } : []
   end
 end
-
-app = App.new
-
-# app.create_genre
-# app.list_music_albums
-# app.list_genres
