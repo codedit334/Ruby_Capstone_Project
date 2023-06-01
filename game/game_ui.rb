@@ -59,6 +59,3 @@ class GameUI
 end
 
 game = GameUI.new
-game.add_game
-game.list_games
-game.list_authors

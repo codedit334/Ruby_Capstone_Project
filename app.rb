@@ -143,12 +143,8 @@ class App
   end
 end
 
-App.new
-# app.create_book
-# app.list_all_books
-# app.add_music_album
-# app.list_music_albums
-# app.list_genres
+app = App.new
+
 # app.create_genre
 # app.list_music_albums
 # app.list_genres
