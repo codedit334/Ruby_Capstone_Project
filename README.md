@@ -20,9 +20,9 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [OOP_SCHOOL_LIBRARY] <a name="about-project"></a>
+# 📖 [CATALOGUE_OF_THINGS] <a name="about-project"></a>
 
-**[OOP_SCHOOL_LIBRARY]** is a project that manages school data built using ruby.
+**[CATALOGUE_OF_THINGS]** is the ruby capstone project, this project manages data ranging from music albums, games and books. It's built using ruby.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -76,6 +76,11 @@ Install this project with:
 - GitHub: [@codedit334](https://github.com/codedit334)
 - Twitter: [@oussedit](https://twitter.com/oussedit)
 - LinkedIn: [Oussama Elabdioui](https://www.linkedin.com/in/oussama-elabdioui-4677a41b6/)
+
+👤 **Sane Myburg**
+
+- GitHub: [@SaneMyburg](https://github.com/SaneMyburg)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sane-myburg/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
