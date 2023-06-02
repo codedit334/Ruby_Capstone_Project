@@ -4,7 +4,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  - [🚀 Video Demo](#video-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -43,6 +43,9 @@
 - [ ] **[Preserve data in Json files]**
 - [ ] **[Unit tests]**
 
+### Video Demo <a name="video-demo"><a>
+
+- [Video demonstration](https://drive.google.com/file/d/1__P22czNeTHlOR5sgBkKNZfPiIVE8xSG/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
